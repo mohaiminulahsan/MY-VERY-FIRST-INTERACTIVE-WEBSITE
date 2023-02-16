@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Baap er Bank</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- tailwind css & tailwind css config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'signika': ['Signika', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1
+            class="text-5xl text-center mt-14 bg-purple-700 text-white w-9/12 mx-auto p-5 rounded-xl font-signika font-normal mb-5">
+            Don't Waste <br>
+            <span>⚠☠ MONEY ☠⚠</span< /h1>
+    </header>
+    <main>
+        <section class="font-signika text-white">
+            <!------------- display --------------->
+            <section class="mb-3 grid grid-cols-3 gap-4 w-9/12 mx-auto">
+
+                <!-- Deposit -->
+                <section class="bg-green-500 p-8 rounded-2xl">
+                    <h4 class=" text-4xl">Deposit</h4>
+                    <h2 class="text-7xl font-medium">$<span id="deposit-display">00</span></h2>
+                </section>
+
+                <!-- Withdraw -->
+                <section class="bg-amber-500 p-8 rounded-2xl">
+                    <h4 class=" text-4xl">Withdraw</h4>
+                    <h2 class="text-7xl font-medium">$<span id="withdraw-display">00</span></h2>
+                </section>
+
+                <!-- Balance -->
+                <section class="bg-rose-500 p-8 rounded-2xl">
+                    <h4 class=" text-4xl">Balance</h4>
+                    <h2 class="text-7xl font-medium">$<span id="balance">1250</span></h2>
+                </section>
+            </section>
+
+
+            <!-------------- input ------------------>
+            <section class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+
+                <!-- Deposit Input -->
+                <section class="bg-fuchsia-500 p-8 rounded-2xl">
+                    <h3 class="text-4xl mb-5 font-semibold">Deposit Here</h3>
+                    <input id="deposit-field" class="text-black w-9/12 h-10 px-5 mb-3 rounded-md font-signika" type="text"
+                        name="" placeholder="$ Amount you want to deposit">
+                    <input id="deposit-btn"
+                        class="block font-signika font-semibold bg-pink-700 hover:bg-amber-500 hover:border-fuchsia-600 hover:border-solid hover:text-black text-white hover px-9 py-3 text-lg rounded-xl"
+                        type="submit" value="Deposit">
+                </section>
+
+                <!-- Withdraw Input -->
+                <section class="bg-sky-500 p-8 rounded-2xl">
+                    <h3 class=" text-4xl mb-5 font-semibold">Withdraw Here</h3>
+                    <input id="withdraw-field" class="text-black w-9/12 h-10 px-5 mb-3 rounded-md font-signika" type="text"
+                        name="" placeholder="$ Amount you want to withdraw">
+                    <input id="withdraw-btn"
+                        class="block font-signika font-semibold bg-indigo-600 hover:bg-amber-500 hover:border-fuchsia-600 hover:border-solid hover:text-black text-white hover px-9 py-3 text-lg rounded-xl"
+                        type="submit" value="Withdraw">
+                </section>
+            </section>
+        </section>
+    </main>
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
+</body>
+
+</html>
